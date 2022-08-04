@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Floating WhatsApp javascript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./css/floating-wpp.min.css">
+    <script src="./js/floating-wpp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="./js/Reloj.js"></script>
+    <title>Proyecto</title>
+</head>
+<body onload="mueveReloj()">
+  <div id="myButton"></div>
+    <header class="header">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <a class="navbar-brand" href="#">Fit-Today</a>
+          <form name="form_reloj">
+            <input type="text" name="reloj" size="10" style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 8pt; text-align : center;">
+            </form>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+      <div class="panels">
+        <div class="panel panel1" >
+            <p>Hey</p>
+            <p>Es</p>
+            <p>ahora</p>
+        </div>
+        <div class="panel panel2">
+            <p>no vez la</p>
+            <p>Hora</p>
+            <p>de escapar</p>
+        </div>
+        <div class="panel panel3">
+            <p>cansado</p>
+            <p>DE</p>
+            <p>trabajar</p>
+        </div>
+        <div class="panel panel4">
+            <p>tiene que </p>
+            <p>Correr</p>
+            <p>solo hazlo</p>
+        </div>
+        <div class="panel panel5">
+            <p>ven</p>
+            <p>Hazlo</p>
+            <p>y diviertete</p>
+        </div>
+        </div>
+        <script>
+          const panels = document.querySelectorAll('.panel');
+  
+          function toggleOpen(){
+              this.classList.toggle('open');
+          }
+  
+          function toggleActive(e){
+              if(e.propertyName.includes('flex-grow')){
+                  this.classList.toggle('open-active'); 
+              }
+          }
+          panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+          panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+      </script>
+        <br>
+        <div class="btn__calculo" id="calculo">
+          <div class="card text-center">
+            <div class="card-header">
+              Querés saber cuántas calorías quemaste?
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Aquí podés consultar las calorías quemadas</h5>
+              <p class="card-text" id="card-text">Dale click al Boton (Iniciar) ingresá cuántos Km Corriste/Caminaste</p>
+              <p class="card-text" id="card-text2"></p>
+            </div>
+            <div class="card-footer text-muted">
+              <button type="button" class="btn btn-outline-success" onclick="calculo()">Iniciar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="login" id="login">
+          <form name='form-login'>
+      
+              <h1>REGISTRO</h1>
+      
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" />
+
+              <label for="nombre">Contraseña:</label>
+              <input type="text" id="password" />
+
+              <input type="button" onclick="guardarDatos()" value="Guardar datos" />
+ 
+              <p id="datos">Pulsa para recuperar tus Datos</p>
+              <input type="button" onclick="recuperarDatos()" value="Recuperar datos" />
+      
+          </form>
+      </div>
+      <script src="js/login.js"></script>
+
+        <div class="card-group" id="productos">
+            <div class="card">
+              <img class="card-img-top" src="https://http2.mlstatic.com/D_NQ_NP_950377-MLA41048594703_032020-O.webp" alt="riñonera turquesa">
+              <div class="card-body">
+                <h5 class="card-title">Riñonera (Varios Colores) Deportiva Crossfit Runner</h5>
+                <p class="card-text">Riñonera Deportiva Correr Running Celular Auriculares Viaje</p>
+                <p class="card-text"><small class="text-muted">$1.070 10% OFF
+                    en 12x cuotas $218                   
+                    pagando con Mercado Crédito</small></p>
+                    <div class="btn">
+                    <button type="button" class="btn btn-success btn-lg" onclick="contadorClicks()">Comprar</button>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://http2.mlstatic.com/D_NQ_NP_888138-MLA32620454242_102019-O.webp" alt="proteinas">
+              <div class="card-body">
+                <h5 class="card-title">Combo Hidratacion Runner Ciclismo Crossfit Isotonico Sales</h5>
+                <p class="card-text">Ingredientes: Dextrosa,Maltodextrina,Azúcar,Cloruro de sodio,Fosfato de potasio,Jugo de naranja</p>
+                <p class="card-text"><small class="text-muted">$ 3.500
+                    en 12x$496.33</small></p>
+                    <div class="btn">
+                    <button type="button" class="btn btn-success btn-lg" onclick="contadorClicks()">Comprar</button>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://http2.mlstatic.com/D_NQ_NP_859901-MLA43274372804_082020-O.webp" alt="mochila">
+              <div class="card-body">
+                <h5 class="card-title">Mochila Runner Ciclismo Montañismo Trekking X-5 L</h5>
+                <p class="card-text">Altura x Ancho x Profundidad: 45.5 cm x 22.5 cm x 5 cm Made in USA Consultar stock</p>
+                <p class="card-text"><small class="text-muted">$2.970 10% OFF
+                    en 12x $421.17</small></p>
+                    <div class="btn">
+                    <button type="button" class="btn btn-success btn-lg" onclick="contadorClicks()">Comprar</button>
+                  </div>
+              </div>
+        
+            </div>
+          </div>
+          <div class="carrito">
+            <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="" width="50px">
+            <h3>Carrito </h3>
+          <input type="text" id="contador" value="-" onload="contadorClicks()"/>
+          <button type="button" class="btn btn-secondary btn-lg" onclick="resetearClicks()">Borrar carrito</button>
+          <p id="btn_carrito"></p>
+          <button type="button" class="btn btn-sucesses btn-lg" onclick="finalizarcompra()">Finalizar Compra</button>
+        </div>
+
+        <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+          <!-- Then put toasts within -->
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header" id="cambio">
+              <img src="/img/main.jpg" width="50px" class="rounded me-2" alt="...">
+              <strong class="me-auto">Atención</strong>
+            </div>
+            <div class="toast-body">
+              Recuerda que los valores del dolar cambian constantemente.
+            </div>
+          </div>
+        </div>
+                              <div class="container">
+                                    <div class="moneda">
+                                        <select id="moneda-uno">
+                                            <option value="AED">AED</option>
+                                            <option value="ARS">ARS</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="BGN">BGN</option>
+                                            <option value="BRL">BRL</option>
+                                            <option value="BSD">BSD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="CHF">CHF</option>
+                                            <option value="CLP">CLP</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="COP">COP</option>
+                                            <option value="CZK">CZK</option>
+                                            <option value="DKK">DKK</option>
+                                            <option value="DOP">DOP</option>
+                                            <option value="EGP">EGP</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="FJD">FJD</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="GTQ">GTQ</option>
+                                            <option value="HKD">HKD</option>
+                                            <option value="HRK">HRK</option>
+                                            <option value="HUF">HUF</option>
+                                            <option value="IDR">IDR</option>
+                                            <option value="ILS">ILS</option>
+                                            <option value="INR">INR</option>
+                                            <option value="ISK">ISK</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="KRW">KRW</option>
+                                            <option value="KZT">KZT</option>
+                                            <option value="MXN">MXN</option>
+                                            <option value="MYR">MYR</option>
+                                            <option value="NOK">NOK</option>
+                                            <option value="NZD">NZD</option>
+                                            <option value="PAB">PAB</option>
+                                            <option value="PEN">PEN</option>
+                                            <option value="PHP">PHP</option>
+                                            <option value="PKR">PKR</option>
+                                            <option value="PLN">PLN</option>
+                                            <option value="PYG">PYG</option>
+                                            <option value="RON">RON</option>
+                                            <option value="RUB">RUB</option>
+                                            <option value="SAR">SAR</option>
+                                            <option value="SEK">SEK</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="THB">THB</option>
+                                            <option value="TRY">TRY</option>
+                                            <option value="TWD">TWD</option>
+                                            <option value="UAH">UAH</option>
+                                            <option value="USD" selected>USD</option>
+                                            <option value="UYU">UYU</option>
+                                            <option value="VND">VND</option>
+                                            <option value="ZAR">ZAR</option>
+                            
+                                        </select>
+                            
+                                        <input 
+                                        type="number" 
+                                        id="cantidad-uno" 
+                                        placeholder="0"  
+                                        value="1"
+                                        >
+                            
+                                    </div>
+                            
+                                    <div class="taza-cambio-container">
+                                        <button class="btn" id="taza">
+                                            CAMBIO
+                                        </button>
+                            
+                                        <div class="cambio" id="cambio"></div>
+                            
+                                    </div>
+                            
+                                    <div class="moneda">
+                                        <select id="moneda-dos">
+                                            <option value="AED">AED</option>
+                                            <option value="ARS" selected>ARS</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="BGN">BGN</option>
+                                            <option value="BRL">BRL</option>
+                                            <option value="BSD">BSD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="CHF">CHF</option>
+                                            <option value="CLP">CLP</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="COP">COP</option>
+                                            <option value="CZK">CZK</option>
+                                            <option value="DKK">DKK</option>
+                                            <option value="DOP">DOP</option>
+                                            <option value="EGP">EGP</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="FJD">FJD</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="GTQ">GTQ</option>
+                                            <option value="HKD">HKD</option>
+                                            <option value="HRK">HRK</option>
+                                            <option value="HUF">HUF</option>
+                                            <option value="IDR">IDR</option>
+                                            <option value="ILS">ILS</option>
+                                            <option value="INR">INR</option>
+                                            <option value="ISK">ISK</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="KRW">KRW</option>
+                                            <option value="KZT">KZT</option>
+                                            <option value="MXN">MXN</option>
+                                            <option value="MYR">MYR</option>
+                                            <option value="NOK">NOK</option>
+                                            <option value="NZD">NZD</option>
+                                            <option value="PAB">PAB</option>
+                                            <option value="PEN">PEN</option>
+                                            <option value="PHP">PHP</option>
+                                            <option value="PKR">PKR</option>
+                                            <option value="PLN">PLN</option>
+                                            <option value="PYG">PYG</option>
+                                            <option value="RON">RON</option>
+                                            <option value="RUB">RUB</option>
+                                            <option value="SAR">SAR</option>
+                                            <option value="SEK">SEK</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="THB">THB</option>
+                                            <option value="TRY">TRY</option>
+                                            <option value="TWD">TWD</option>
+                                            <option value="UAH">UAH</option>
+                                            <option value="USD">USD</option>
+                                            <option value="UYU">UYU</option>
+                                            <option value="VND">VND</option>
+                                            <option value="ZAR">ZAR</option>
+                            
+                                        </select>
+                            
+                                        <input 
+                                        type="number" 
+                                        id="cantidad-dos" 
+                                        placeholder="0"  
+                                        >
+                            
+                                    </div>
+                                </div>
+                            
+                            <script src="./js/Moneda.js"></script>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>   
+      <br> 
+    <script src="/js/miarchivo.js"></script>
+    <script type="text/javascript">
+      $(function () {
+          $('#myButton').floatingWhatsApp({
+              phone: '5491133359850',
+              popupMessage: 'Hola, en que puedo ayudarte?',
+              message: "Necesito ...",
+              showPopup: true,
+              showOnIE: false,
+              headerTitle: 'Bienvenido!',
+              headerColor: 'crimson',
+              backgroundColor: 'crimson',
+              buttonImage: '<img src="whatsapp.svg" />'
+          });
+      });
+  </script>
+  
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+  
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      </a>
+  
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#calculo" class="nav-link px-2 text-muted">Calculo de calorias</a></li>
+        <li class="nav-item"><a href="#login" class="nav-link px-2 text-muted">Login</a></li>
+        <li class="nav-item"><a href="#productos" class="nav-link px-2 text-muted">Productos</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+    </footer>
+  
+</body>
+</html>

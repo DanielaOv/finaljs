@@ -1,0 +1,274 @@
+*{
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    
+}
+body{
+    background-color: #a9a9a9;
+    color: white;
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    margin: 0;
+  
+}
+
+.navbar{
+    display:flex;
+
+}
+
+.btn__calculo{
+    display: flex;
+    text-align: center;
+    align-content: center;   
+    justify-content: center; 
+}
+
+button{
+    color: white;
+    border-bottom: 10px;
+    border-color: white;
+    background-color: #35a900;
+    border-radius: 5px;
+    padding: 10px;
+}
+main{
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
+main img{
+    width: 100%;
+}
+.btn__calculo button{
+    margin: 20px;
+}
+/*----------------------------------------*/
+.card{
+    margin: 10px;
+}
+
+.card img {
+    height: 50%;
+    
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+/*-------------------------Galeria---------------*/
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel{
+    background: #6b0f9c;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition: 
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    font-size: 10px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel1 { background-image: url("/img/galery1.jpg");}
+.panel2 { background-image: url("/img/galery2.jpg");}
+.panel3 { background-image: url("/img/galery3.jpg");}
+.panel4 { background-image: url("/img/galery4.jpg");}
+.panel5 { background-image: url("/img/galery5.jpg");}
+
+
+
+
+
+/* flex children*/
+
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.panel >*:first-child { transform: translateY(-100%);}
+.panel.open-active >*:first-child { transform: translateY(0);}
+.panel >*:last-child { transform: translateY(100%);}
+.panel.open-active >*:last-child { transform: translateY(0);}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 3em;
+}
+.panel p:nth-child(2){
+    font-size: 3em;
+}
+.panel.open {
+    flex: 5;
+    font-size: 20px;
+}
+.cta {
+    color: rgb(172, 11, 11);
+    text-decoration: none;
+}
+
+
+
+
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+
+p {
+  line-height: 1.5em;
+}
+
+after { clear: both; }
+
+.login {
+  margin: 50px auto;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login form {
+  color: whitesmoke;
+  margin: auto;
+  padding: 22px 22px 22px 22px;
+  width: 100%;
+  border-radius: 5px;
+  background: #282e33;
+  border-top: 3px solid #434a52;
+  border-bottom: 3px solid #434a52;
+  display: flex;
+  flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.login form span {
+  background-color: #363b41;
+  border-radius: 3px 0px 0px 3px;
+  border-right: 3px solid #434a52;
+  color: #606468;
+  display: block;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+.login form input[type="email"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 90%;
+  height: 50px;
+}
+
+.login form input[type="password"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 90%;
+  height: 50px;
+}
+
+.login form input[type="button"] {
+  background: #b5cd60;
+  border: 0;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin: 5px;
+}
+#login form input[type="button"]:hover {
+  background: #16aa56;
+}
+.carrito{
+    margin: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carrito input  {
+    overflow: visible;
+    color: red;
+    text-align: center;
+    display: flex;
+    margin: 10px;
+}
+h3{
+   background-color: rgb(249 225 147);
+   border-radius: 10px;
+   text-align: center;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+    color:black;
+}
+
+/* MONEDA */
+
+.taza-cambio-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.toast-body{
+  margin-bottom: 10px;
+}
